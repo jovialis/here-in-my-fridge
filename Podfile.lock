@@ -1,0 +1,30 @@
+PODS:
+  - Alamofire (4.9.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Result (4.1.0)
+  - TableManager (1.11.0)
+
+DEPENDENCIES:
+  - Moya
+  - TableManager
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Moya
+    - Result
+    - TableManager
+
+SPEC CHECKSUMS:
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  TableManager: f37977cc9709548060b42dd3cb872ee7668cfe22
+
+PODFILE CHECKSUM: 825af1ffa37bd8053d979e4543c9e2115dc4f445
+
+COCOAPODS: 1.5.2
