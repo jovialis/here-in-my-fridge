@@ -6,10 +6,12 @@ PODS:
     - Alamofire (~> 4.1)
     - Result (~> 4.1)
   - Result (4.1.0)
+  - Signals (6.1.0)
   - TableManager (1.11.0)
 
 DEPENDENCIES:
   - Moya
+  - Signals
   - TableManager
 
 SPEC REPOS:
@@ -17,14 +19,16 @@ SPEC REPOS:
     - Alamofire
     - Moya
     - Result
+    - Signals
     - TableManager
 
 SPEC CHECKSUMS:
   Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  Signals: f8e5c979e93c35273f8dfe55ee7f47213d3e8fe8
   TableManager: f37977cc9709548060b42dd3cb872ee7668cfe22
 
-PODFILE CHECKSUM: 825af1ffa37bd8053d979e4543c9e2115dc4f445
+PODFILE CHECKSUM: af03ee0ceb204b68f6030754b545dd005b46a9cf
 
 COCOAPODS: 1.5.2
