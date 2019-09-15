@@ -41,5 +41,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>SpoonacularAPIKey</key>
+	<string>75148fd0e37e4b0e92b95147b50a24be</string>
 </dict>
 </plist>

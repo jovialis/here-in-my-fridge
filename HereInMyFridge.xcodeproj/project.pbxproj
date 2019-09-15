@@ -17,6 +17,8 @@
 		C026072D232D7AE600E2FFDA /* Fridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026072C232D7AE600E2FFDA /* Fridge.swift */; };
 		C026072F232D7B1700E2FFDA /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026072E232D7B1700E2FFDA /* Ingredient.swift */; };
 		C0260731232D893E00E2FFDA /* EditIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0260730232D893E00E2FFDA /* EditIngredientViewController.swift */; };
+		C040C944232DB409007449E0 /* SpoonacularAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040C943232DB409007449E0 /* SpoonacularAPI.swift */; };
+		C040C946232DC411007449E0 /* Spoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040C945232DC411007449E0 /* Spoonacular.swift */; };
 		C09504F4232D6DC90026194E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09504F3232D6DC90026194E /* AppDelegate.swift */; };
 		C09504F6232D6DC90026194E /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09504F5232D6DC90026194E /* FridgeViewController.swift */; };
 		C09504F9232D6DC90026194E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09504F7232D6DC90026194E /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		C026072C232D7AE600E2FFDA /* Fridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fridge.swift; sourceTree = "<group>"; };
 		C026072E232D7B1700E2FFDA /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C0260730232D893E00E2FFDA /* EditIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientViewController.swift; sourceTree = "<group>"; };
+		C040C943232DB409007449E0 /* SpoonacularAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPI.swift; sourceTree = "<group>"; };
+		C040C945232DC411007449E0 /* Spoonacular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spoonacular.swift; sourceTree = "<group>"; };
 		C09504F0232D6DC90026194E /* HereInMyFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereInMyFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09504F3232D6DC90026194E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C09504F5232D6DC90026194E /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 			path = "Ingredient Cell";
 			sourceTree = "<group>";
 		};
+		C040C947232DC5E6007449E0 /* Spoonacular */ = {
+			isa = PBXGroup;
+			children = (
+				C040C943232DB409007449E0 /* SpoonacularAPI.swift */,
+				C040C945232DC411007449E0 /* Spoonacular.swift */,
+			);
+			path = Spoonacular;
+			sourceTree = "<group>";
+		};
 		C09504E7232D6DC90026194E = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 		C09504F2232D6DC90026194E /* HereInMyFridge */ = {
 			isa = PBXGroup;
 			children = (
+				C040C947232DC5E6007449E0 /* Spoonacular */,
 				C026071F232D713600E2FFDA /* Interface */,
 				C09504F3232D6DC90026194E /* AppDelegate.swift */,
 				C09504FA232D6DCA0026194E /* Assets.xcassets */,
@@ -350,11 +364,13 @@
 				C026072D232D7AE600E2FFDA /* Fridge.swift in Sources */,
 				C0260727232D738E00E2FFDA /* UIIngredientCell.swift in Sources */,
 				C026072F232D7B1700E2FFDA /* Ingredient.swift in Sources */,
+				C040C946232DC411007449E0 /* Spoonacular.swift in Sources */,
 				C026072B232D76E800E2FFDA /* AddIngredientViewController.swift in Sources */,
 				C09504F6232D6DC90026194E /* FridgeViewController.swift in Sources */,
 				C09504F4232D6DC90026194E /* AppDelegate.swift in Sources */,
 				C0260721232D715500E2FFDA /* UIFoodCell.swift in Sources */,
 				C0260731232D893E00E2FFDA /* EditIngredientViewController.swift in Sources */,
+				C040C944232DB409007449E0 /* SpoonacularAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
