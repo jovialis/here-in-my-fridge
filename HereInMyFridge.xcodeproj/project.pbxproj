@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		7FB5CF7E83CFD3FAED381A36 /* Pods_HereInMyFridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A82246038338F4B429CCE9E1 /* Pods_HereInMyFridge.framework */; };
 		A52040165B2213303C84CAAD /* Pods_HereInMyFridgeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A0B3E3124994C40099E5E6 /* Pods_HereInMyFridgeTests.framework */; };
-		C0260721232D715500E2FFDA /* UIFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0260720232D715500E2FFDA /* UIFoodCell.swift */; };
-		C0260723232D717200E2FFDA /* UIFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0260722232D717200E2FFDA /* UIFoodCell.xib */; };
+		C0260721232D715500E2FFDA /* UIRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0260720232D715500E2FFDA /* UIRecipeCell.swift */; };
 		C0260727232D738E00E2FFDA /* UIIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0260726232D738E00E2FFDA /* UIIngredientCell.swift */; };
 		C0260729232D739B00E2FFDA /* UIIngredientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0260728232D739B00E2FFDA /* UIIngredientCell.xib */; };
 		C026072B232D76E800E2FFDA /* AddIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C026072A232D76E800E2FFDA /* AddIngredientViewController.swift */; };
@@ -19,6 +18,9 @@
 		C0260731232D893E00E2FFDA /* EditIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0260730232D893E00E2FFDA /* EditIngredientViewController.swift */; };
 		C040C944232DB409007449E0 /* SpoonacularAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040C943232DB409007449E0 /* SpoonacularAPI.swift */; };
 		C040C946232DC411007449E0 /* Spoonacular.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040C945232DC411007449E0 /* Spoonacular.swift */; };
+		C040C949232DC940007449E0 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040C948232DC940007449E0 /* RecipesViewController.swift */; };
+		C040C94D232DCB8C007449E0 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040C94C232DCB8C007449E0 /* Recipe.swift */; };
+		C040C950232DD43D007449E0 /* RecipeShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C040C94F232DD43D007449E0 /* RecipeShoppingViewController.swift */; };
 		C09504F4232D6DC90026194E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09504F3232D6DC90026194E /* AppDelegate.swift */; };
 		C09504F6232D6DC90026194E /* FridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09504F5232D6DC90026194E /* FridgeViewController.swift */; };
 		C09504F9232D6DC90026194E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C09504F7232D6DC90026194E /* Main.storyboard */; };
@@ -43,8 +45,7 @@
 		4F27FFBA0635ED76171E520B /* Pods-HereInMyFridgeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereInMyFridgeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HereInMyFridgeTests/Pods-HereInMyFridgeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7D72F8414ED7542C426FF2DD /* Pods-HereInMyFridgeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HereInMyFridgeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-HereInMyFridgeTests/Pods-HereInMyFridgeTests.release.xcconfig"; sourceTree = "<group>"; };
 		A82246038338F4B429CCE9E1 /* Pods_HereInMyFridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HereInMyFridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0260720232D715500E2FFDA /* UIFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFoodCell.swift; sourceTree = "<group>"; };
-		C0260722232D717200E2FFDA /* UIFoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIFoodCell.xib; sourceTree = "<group>"; };
+		C0260720232D715500E2FFDA /* UIRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIRecipeCell.swift; sourceTree = "<group>"; };
 		C0260726232D738E00E2FFDA /* UIIngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIIngredientCell.swift; sourceTree = "<group>"; };
 		C0260728232D739B00E2FFDA /* UIIngredientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIIngredientCell.xib; sourceTree = "<group>"; };
 		C026072A232D76E800E2FFDA /* AddIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +54,9 @@
 		C0260730232D893E00E2FFDA /* EditIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientViewController.swift; sourceTree = "<group>"; };
 		C040C943232DB409007449E0 /* SpoonacularAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpoonacularAPI.swift; sourceTree = "<group>"; };
 		C040C945232DC411007449E0 /* Spoonacular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spoonacular.swift; sourceTree = "<group>"; };
+		C040C948232DC940007449E0 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		C040C94C232DCB8C007449E0 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		C040C94F232DD43D007449E0 /* RecipeShoppingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeShoppingViewController.swift; sourceTree = "<group>"; };
 		C09504F0232D6DC90026194E /* HereInMyFridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HereInMyFridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09504F3232D6DC90026194E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C09504F5232D6DC90026194E /* FridgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeViewController.swift; sourceTree = "<group>"; };
@@ -113,19 +117,12 @@
 				C09504F5232D6DC90026194E /* FridgeViewController.swift */,
 				C026072A232D76E800E2FFDA /* AddIngredientViewController.swift */,
 				C0260730232D893E00E2FFDA /* EditIngredientViewController.swift */,
+				C040C948232DC940007449E0 /* RecipesViewController.swift */,
+				C040C94F232DD43D007449E0 /* RecipeShoppingViewController.swift */,
 				C0260725232D733C00E2FFDA /* Ingredient Cell */,
-				C0260724232D717500E2FFDA /* Food Cell */,
+				C040C94E232DD24E007449E0 /* Recipe Cell */,
 			);
 			path = Interface;
-			sourceTree = "<group>";
-		};
-		C0260724232D717500E2FFDA /* Food Cell */ = {
-			isa = PBXGroup;
-			children = (
-				C0260720232D715500E2FFDA /* UIFoodCell.swift */,
-				C0260722232D717200E2FFDA /* UIFoodCell.xib */,
-			);
-			path = "Food Cell";
 			sourceTree = "<group>";
 		};
 		C0260725232D733C00E2FFDA /* Ingredient Cell */ = {
@@ -144,6 +141,32 @@
 				C040C945232DC411007449E0 /* Spoonacular.swift */,
 			);
 			path = Spoonacular;
+			sourceTree = "<group>";
+		};
+		C040C94A232DCB50007449E0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C026072E232D7B1700E2FFDA /* Ingredient.swift */,
+				C040C94C232DCB8C007449E0 /* Recipe.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C040C94B232DCB60007449E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C09504FA232D6DCA0026194E /* Assets.xcassets */,
+				C09504FC232D6DCA0026194E /* LaunchScreen.storyboard */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		C040C94E232DD24E007449E0 /* Recipe Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C0260720232D715500E2FFDA /* UIRecipeCell.swift */,
+			);
+			path = "Recipe Cell";
 			sourceTree = "<group>";
 		};
 		C09504E7232D6DC90026194E = {
@@ -169,14 +192,13 @@
 		C09504F2232D6DC90026194E /* HereInMyFridge */ = {
 			isa = PBXGroup;
 			children = (
+				C09504FF232D6DCA0026194E /* Info.plist */,
+				C09504F3232D6DC90026194E /* AppDelegate.swift */,
+				C026072C232D7AE600E2FFDA /* Fridge.swift */,
+				C040C94A232DCB50007449E0 /* Data */,
 				C040C947232DC5E6007449E0 /* Spoonacular */,
 				C026071F232D713600E2FFDA /* Interface */,
-				C09504F3232D6DC90026194E /* AppDelegate.swift */,
-				C09504FA232D6DCA0026194E /* Assets.xcassets */,
-				C09504FC232D6DCA0026194E /* LaunchScreen.storyboard */,
-				C09504FF232D6DCA0026194E /* Info.plist */,
-				C026072C232D7AE600E2FFDA /* Fridge.swift */,
-				C026072E232D7B1700E2FFDA /* Ingredient.swift */,
+				C040C94B232DCB60007449E0 /* Support Files */,
 			);
 			path = HereInMyFridge;
 			sourceTree = "<group>";
@@ -274,7 +296,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0260723232D717200E2FFDA /* UIFoodCell.xib in Resources */,
 				C09504FE232D6DCA0026194E /* LaunchScreen.storyboard in Resources */,
 				C09504FB232D6DCA0026194E /* Assets.xcassets in Resources */,
 				C09504F9232D6DC90026194E /* Main.storyboard in Resources */,
@@ -303,6 +324,7 @@
 				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/Signals/Signals.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/TableManager/TableManager.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -311,6 +333,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Signals.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TableManager.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,11 +387,14 @@
 				C026072D232D7AE600E2FFDA /* Fridge.swift in Sources */,
 				C0260727232D738E00E2FFDA /* UIIngredientCell.swift in Sources */,
 				C026072F232D7B1700E2FFDA /* Ingredient.swift in Sources */,
+				C040C94D232DCB8C007449E0 /* Recipe.swift in Sources */,
+				C040C949232DC940007449E0 /* RecipesViewController.swift in Sources */,
 				C040C946232DC411007449E0 /* Spoonacular.swift in Sources */,
 				C026072B232D76E800E2FFDA /* AddIngredientViewController.swift in Sources */,
+				C040C950232DD43D007449E0 /* RecipeShoppingViewController.swift in Sources */,
 				C09504F6232D6DC90026194E /* FridgeViewController.swift in Sources */,
 				C09504F4232D6DC90026194E /* AppDelegate.swift in Sources */,
-				C0260721232D715500E2FFDA /* UIFoodCell.swift in Sources */,
+				C0260721232D715500E2FFDA /* UIRecipeCell.swift in Sources */,
 				C0260731232D893E00E2FFDA /* EditIngredientViewController.swift in Sources */,
 				C040C944232DB409007449E0 /* SpoonacularAPI.swift in Sources */,
 			);

@@ -8,6 +8,8 @@
 
 import UIKit
 import TableManager
+import Moya
+import SwiftyJSON
 
 class FridgeViewController: UITableViewController {
 
@@ -92,10 +94,14 @@ class FridgeViewController: UITableViewController {
 	}
 	
 	@IBAction func findRecipesClicked(_ sender: UIButton) {
-		//TODO: Web call
+		// Push to the recipes menu
+		if let controller = self.storyboard?.instantiateViewController(withIdentifier: "recipes") {
+			self.navigationController?.pushViewController(controller, animated: true)
+		}
 	}
 	
 	@IBAction func addButtonClicked(_ sender: UIBarButtonItem) {
+		// Present the add food menu
 		if let addController = self.storyboard?.instantiateViewController(withIdentifier: "Add") {
 			self.present(addController, animated: true, completion: nil)
 		}

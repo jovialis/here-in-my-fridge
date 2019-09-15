@@ -11,6 +11,7 @@ target 'HereInMyFridge' do
   pod 'Moya'
   pod 'TableManager'
   pod 'Signals'
+  pod 'SwiftyJSON'
 
   target 'HereInMyFridgeTests' do
     inherit! :search_paths

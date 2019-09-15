@@ -1,5 +1,5 @@
 //
-//  UIFoodItem.swift
+//  UIRecipeCell.swift
 //  HereInMyFridge
 //
 //  Created by Dylan Hanson on 9/14/19.
@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-class UIFoodCell: UITableViewCell {
+class UIRecipeCell: UITableViewCell {
 	
-	@IBOutlet weak var foodNameLabel: UILabel!
-	@IBOutlet weak var foodDoableLabel: UILabel!
+	@IBOutlet weak var recipeNameLabel: UILabel!
+	@IBOutlet weak var recipeDoableLabel: UILabel!
 	
 }

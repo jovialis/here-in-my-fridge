@@ -13,6 +13,9 @@ class Fridge {
 	
 	static let shared = Fridge()
 	
+	// NOTE: Using an array for this is very inefficient since we have to search it every time
+	//       we need an ingredient's information. The optimal solution would be a map but I'm already
+	//       too deep in at this point.
 	private(set) var ingredients: [Ingredient]
 	
 	let ingredientAdded: Signal<(Int,Ingredient)> // Index, ingredient
@@ -72,6 +75,34 @@ class Fridge {
 			// Alert view controllers
 			self.ingredientRemoved.fire((existingIndex, existing))
 		}
+	}
+	
+	func getIngredientCount(name: String) -> Int {
+		return self.ingredients.first(where: { $0.name == name })?.count ?? 0
+	}
+	
+	// Assemble an array of missing ingredients, including ingredients the user possesses but doesn't have a sufficient amount of.
+	func assembleShoppingList(recipe: Recipe) -> [Ingredient] {
+		var ingredients: [Ingredient] = []
+		
+		// Append all missing ingredients to recipe
+		ingredients.append(contentsOf: recipe.missingIngredients)
+		
+		for userIngredient in recipe.usedIngredients {
+			let requiredCount = userIngredient.count
+			let userCount = self.getIngredientCount(name: userIngredient.name)
+			
+			// Check if the user has enough of the used ingredient
+			if userCount < requiredCount {
+				// Append a new Ingredient to the list representing how much more we need to purchase.
+				let requiredIngredient = Ingredient(userIngredient)
+				requiredIngredient.count = requiredCount - userCount
+				
+				ingredients.append(requiredIngredient)
+			}
+		}
+		
+		return ingredients
 	}
 	
 }
