@@ -17,6 +17,9 @@ class RecipesViewController: UITableViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.tableView.rowHeight = 100
+		
+		// Perform search for recipes
 		self.searchForRecipes()
 	}
 	
@@ -53,8 +56,13 @@ class RecipesViewController: UITableViewController {
 			// Append row
 			let row = self.tableView.addRow("recipe")
 			
+			row.setHeight(withStaticHeight: 100)
+			
 			row.setConfiguration({ (row, cell, indexPath) in
 				if let cell = cell as? UIRecipeCell {
+					
+					// Disclosure
+					cell.accessoryType = .disclosureIndicator
 					
 					// Set recipe name in cell
 					cell.recipeNameLabel.text = recipe.name.capitalized
@@ -64,6 +72,13 @@ class RecipesViewController: UITableViewController {
 					
 					cell.recipeDoableLabel.text = shoppingList.isEmpty ? "No Shopping Required" : "\(shoppingList.count) Ingredients Needed"
 					
+				}
+			})
+			
+			row.setDidSelect({ (row, table, indexPath) in
+				if let controller = self.storyboard?.instantiateViewController(withIdentifier: "shopping") as? RecipeShoppingViewController {
+					controller.recipe = recipe
+					self.navigationController?.pushViewController(controller, animated: true)
 				}
 			})
 			

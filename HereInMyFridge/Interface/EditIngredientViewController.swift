@@ -32,7 +32,7 @@ class EditIngredientViewController: UIViewController {
 			self.ingredientCountLabel.text = "\(Int(self.countStepper.value))"
 
 			// Update count, triggering signals
-			Fridge.shared.editIngredientCount(name: self.ingredient.name, count: Int(self.countStepper.value))
+			Fridge.shared.editIngredientCount(name: self.ingredient.name, count: self.countStepper.value)
 		})
 	}
 	

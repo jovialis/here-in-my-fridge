@@ -30,7 +30,7 @@ class Fridge {
 		self.ingredientRemoved = Signal<(Int, Ingredient)>()
 	}
 	
-	func addIngredient(name: String, count: Int) {
+	func addIngredient(name: String, count: Double) {
 		// Properly format name
 		let formattedName = name.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
 		
@@ -56,7 +56,7 @@ class Fridge {
 		self.ingredientAdded.fire((0, ingredient))
 	}
 	
-	func editIngredientCount(name: String, count: Int) {
+	func editIngredientCount(name: String, count: Double) {
 		if let existingIndex = self.ingredients.firstIndex(where: { $0.name == name }) {
 			let existing = self.ingredients[existingIndex]
 			
@@ -77,7 +77,7 @@ class Fridge {
 		}
 	}
 	
-	func getIngredientCount(name: String) -> Int {
+	func getIngredientCount(name: String) -> Double {
 		return self.ingredients.first(where: { $0.name == name })?.count ?? 0
 	}
 	

@@ -23,8 +23,8 @@ class AddIngredientViewController: UIViewController {
 		return self.nameTextField.text ?? ""
 	}
 	
-	private var count: Int {
-		return Int(self.countStepper.value)
+	private var count: Double {
+		return self.countStepper.value
 	}
 	
 	// Whether the item can be accepted yet

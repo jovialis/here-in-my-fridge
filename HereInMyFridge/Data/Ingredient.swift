@@ -13,7 +13,7 @@ class Ingredient {
 	
 	let id: Int
 	let name: String
-	var count: Int
+	var count: Double
 	let aisle: String
 	
 	// Copy constructor
@@ -25,7 +25,7 @@ class Ingredient {
 	}
 	
 	// Constructor for user Fridge
-	init(name: String, count: Int) {
+	init(name: String, count: Double) {
 		self.id = -1
 		self.name = name
 		self.count = count
@@ -36,7 +36,7 @@ class Ingredient {
 	init(json: JSON) {
 		self.id = json["id"].intValue
 		self.name = json["name"].stringValue
-		self.count = json["amount"].intValue
+		self.count = json["amount"].doubleValue
 		self.aisle = json["aisle"].stringValue
 	}
 	

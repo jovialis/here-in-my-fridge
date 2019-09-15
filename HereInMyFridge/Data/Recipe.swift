@@ -18,7 +18,7 @@ struct Recipe {
 	let missingIngredients: [Ingredient]
 	
 	// Recipes will only ever be instantiated in response to the server
-	init(json: JSON) {
+	init(json: JSON) {		
 		self.id = json["id"].intValue
 		self.name = json["title"].stringValue
 		
