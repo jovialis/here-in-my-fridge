@@ -17,6 +17,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w10-j4-hf8">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.3411764706" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="Flf-8i-zK0" kind="relationship" relationship="rootViewController" id="8xM-xr-WxW"/>
@@ -44,7 +45,7 @@
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsD-fe-zjX">
                                             <rect key="frame" x="15" y="2" width="384" height="40"/>
-                                            <color key="backgroundColor" name="linkColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" red="1" green="0.3411764706" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Zjs-89-rIy"/>
                                             </constraints>
@@ -88,6 +89,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ao7-Ts-vBr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.3411764706" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BXX-fH-csc" kind="relationship" relationship="rootViewController" id="KhC-OU-9sE"/>
@@ -131,6 +133,7 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minimumValue="1" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="NTf-am-LGM">
                                                 <rect key="frame" x="290" y="0.0" width="94" height="29"/>
+                                                <color key="tintColor" red="1" green="0.3411764705882353" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </stepper>
                                         </subviews>
                                     </stackView>
@@ -292,6 +295,7 @@
                                             </label>
                                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="A4Z-xV-Hbf">
                                                 <rect key="frame" x="290" y="0.0" width="94" height="29"/>
+                                                <color key="tintColor" red="1" green="0.3411764706" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                             </stepper>
                                         </subviews>
                                     </stackView>
