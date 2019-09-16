@@ -40,6 +40,7 @@ class RecipesViewController: UITableViewController {
 					let recipes: [Recipe] = json.arrayValue.map({ Recipe(json: $0) })
 					
 					self.displayRecipes(recipes: recipes)
+					self.printShoppingList(recipes: recipes)
 				} catch {
 					print(error.localizedDescription)
 				}
@@ -86,5 +87,26 @@ class RecipesViewController: UITableViewController {
 		
 		self.tableView.reloadData()
 	}
+	
+	private func printShoppingList(recipes: [Recipe]) {
+		var recipeRoot = JSON()
+		
+		// Iterate over received recipes
+		for recipe in recipes {
+			var recipeIngredientsRoot = JSON()
+			
+			// Set a Key Value pair for each ingredient and its aisle
+			for ingredient in recipe.shoppingList {
+				recipeIngredientsRoot[ingredient.name].string = ingredient.aisle
+			}
+			
+			// Set this ingredient list object in the root
+			recipeRoot[recipe.name] = recipeIngredientsRoot
+		}
+		
+		// Print out the JSON
+		print(recipeRoot)
+	}
+	
 	
 }
