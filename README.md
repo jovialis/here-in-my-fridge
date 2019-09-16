@@ -22,4 +22,4 @@ Here in my Fridge uses CocoaPods as a dependency manager, plus multiple librarie
 [**Realm**](https://realm.io "**Realm**"): Local object-oriented database for saving and restoring listed user data.
 
 ## Installation
-Here in my Fridge requires XCode to run. First clone the project, then open the `.xcworkspace` file. **DO NOT OPEN THE `.xcodeproj` FILE. DEPENDENCIES WILL NOT BE PROPERLY INSTALLED.** Build and run on an iOS Device or Simulator using iOS 10.0+
+Here in my Fridge requires XCode to run. First clone the project. Next, [install Cocoapods](https://guides.cocoapods.org/using/getting-started.html). Navigate to the project directory then execute `pod install` on the command line. Finally, find the project directory and open the `.xcworkspace` file. **DO NOT OPEN THE `.xcodeproj` FILE. DEPENDENCIES WILL NOT BE PROPERLY INSTALLED.** Build and run on an iOS Device or Simulator using iOS 10.0+
