@@ -33,7 +33,7 @@ class RecipeShoppingViewController: UITableViewController {
 					
 					// Set up cell
 					cell.ingredientNameLabel.text = ingredient.name.capitalized
-					cell.ingredientCountLabel.text = "You must buy \(ingredient.count)"
+					cell.ingredientCountLabel.text = "You must buy \(ingredient.editableCount)"
 					
 					cell.ingredientAisleLabel.isHidden = false
 					cell.ingredientAisleLabel.text = "in the \(ingredient.aisle) Aisle"

@@ -24,8 +24,8 @@ class EditIngredientViewController: UIViewController {
 		
 		// Set up initial values
 		self.ingredientNameLabel.text = self.ingredient.name.capitalized
-		self.ingredientCountLabel.text = "\(self.ingredient.count)"
-		self.countStepper.setValue(self.ingredient.count, forKey: "value")
+		self.ingredientCountLabel.text = "\(self.ingredient.editableCount)"
+		self.countStepper.setValue(self.ingredient.editableCount, forKey: "value")
 		
 		// Increment stepper
 		self.countStepper.onValueChanged.subscribe(with: self, callback: {

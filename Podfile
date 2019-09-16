@@ -12,6 +12,7 @@ target 'HereInMyFridge' do
   pod 'TableManager'
   pod 'Signals'
   pod 'SwiftyJSON'
+  pod 'RealmSwift'
 
   target 'HereInMyFridgeTests' do
     inherit! :search_paths

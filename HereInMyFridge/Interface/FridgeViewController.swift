@@ -81,7 +81,7 @@ class FridgeViewController: UITableViewController {
 			cell.accessoryType = .disclosureIndicator
 			
 			cell.ingredientNameLabel.text = ingredient.name.capitalized
-			cell.ingredientCountLabel.text = "\(ingredient.count)"
+			cell.ingredientCountLabel.text = "\(ingredient.editableCount)"
 		})
 		
 		row.setDidSelect({row, cell, indexPath in

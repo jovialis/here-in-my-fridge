@@ -8,6 +8,7 @@
 
 import Foundation
 import Signals
+import RealmSwift
 
 class Fridge {
 	
@@ -28,6 +29,17 @@ class Fridge {
 		self.ingredientAdded = Signal<(Int, Ingredient)>()
 		self.ingredientUpdated = Signal<(Int, Int, Ingredient)>()
 		self.ingredientRemoved = Signal<(Int, Ingredient)>()
+		
+		// Load ingredients to memory
+		self.loadIngredients()
+	}
+	
+	func loadIngredients() {
+		// Local realm instance
+		let realmInstance = try! Realm()
+		
+		// Append all locally stored ingredients to the array in memory. Sort by their date last edited.
+		self.ingredients.append(contentsOf: realmInstance.objects(Ingredient.self).sorted(by: { $0.lastEdited > $1.lastEdited }))
 	}
 	
 	func addIngredient(name: String, count: Double) {
@@ -41,7 +53,7 @@ class Fridge {
 			self.ingredients.insert(existing, at: 0)
 			
 			// Increment count
-			existing.count += count
+			existing.editableCount += count
 			
 			// Alert view controllers
 			self.ingredientUpdated.fire((0, existingIndex, existing))
@@ -54,6 +66,12 @@ class Fridge {
 		
 		// Alert controllers
 		self.ingredientAdded.fire((0, ingredient))
+		
+		// Write to disk
+		let realm = try! Realm()
+		try! realm.write {
+			realm.add(ingredient)
+		}
 	}
 	
 	func editIngredientCount(name: String, count: Double) {
@@ -61,7 +79,7 @@ class Fridge {
 			let existing = self.ingredients[existingIndex]
 			
 			// Increment count
-			existing.count = count
+			existing.editableCount = count
 			
 			// Alert view controllers
 			self.ingredientUpdated.fire((existingIndex, existingIndex, existing))
@@ -74,11 +92,17 @@ class Fridge {
 			
 			// Alert view controllers
 			self.ingredientRemoved.fire((existingIndex, existing))
+			
+			// Delete from file
+			let realm = try! Realm()
+			try? realm.write {
+				realm.delete(existing)
+			}
 		}
 	}
 	
 	func getIngredientCount(name: String) -> Double {
-		return self.ingredients.first(where: { $0.name == name })?.count ?? 0
+		return self.ingredients.first(where: { $0.name == name })?.editableCount ?? 0
 	}
 	
 	// Assemble an array of missing ingredients, including ingredients the user possesses but doesn't have a sufficient amount of.
@@ -89,14 +113,14 @@ class Fridge {
 		ingredients.append(contentsOf: recipe.missingIngredients)
 		
 		for userIngredient in recipe.usedIngredients {
-			let requiredCount = userIngredient.count
+			let requiredCount = userIngredient.editableCount
 			let userCount = self.getIngredientCount(name: userIngredient.name)
 			
 			// Check if the user has enough of the used ingredient
 			if userCount < requiredCount {
 				// Append a new Ingredient to the list representing how much more we need to purchase.
 				let requiredIngredient = Ingredient(userIngredient)
-				requiredIngredient.count = requiredCount - userCount
+				requiredIngredient.editableCount = requiredCount - userCount
 				
 				ingredients.append(requiredIngredient)
 			}
